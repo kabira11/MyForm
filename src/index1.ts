@@ -18,15 +18,16 @@ export class FormControl implements ComponentFramework.StandardControl<IInputs, 
     this.notifyOutputChanged = notifyOutputChanged;
 
     const root = ReactDOM.createRoot(container);
-    root.render(
-      <MyForm
-        value={this.value}
-        onSave={(val: string) => {
-          this.value = val;
-          this.notifyOutputChanged();
-        }}
-      />
-    );
+root.render(
+  React.createElement(MyForm, {
+    value: this.value,
+    onSave: (val: string) => {
+      this.value = val;
+      this.notifyOutputChanged();
+    }
+  })
+);
+
   }
 
   public updateView(context: ComponentFramework.Context<IInputs>): void {
