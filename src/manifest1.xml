@@ -1,0 +1,3 @@
+<control namespace="YourCompany" constructor="FormControl" version="1.0.0" display-name-key="Form Control" description-key="Form Control">
+  <property name="sampleProperty" display-name-key="Value" description-key="Form value" of-type="SingleLine.Text" usage="bound" />
+</control>
